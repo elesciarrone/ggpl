@@ -45,14 +45,14 @@ def createDoor(coordinateD, occupancyD):
                     if ix == 1:
                         prodXY = PROD([QUOTE([x[cont]]), QUOTE(y)])
                         prod = PROD([prodXY, QUOTE([z[iz]])])
-                        door.append(COLOR([51. / 255., 25. / 255., 0, 1]))
+                        door.append(COLOR(BROWN))
                         door.append(prod)
                     if ix == 0:
                         # cornice
                         prodXY = PROD([QUOTE([x[cont] - .01]), QUOTE(dCorner)])
                         prod = PROD([prodXY, QUOTE([z[iz] - .01])])
                         door.append(T([1, 2, 3])([0, y[0] / 2. - dCorner[0] / 2 - .005, 0]))
-                        door.append(COLOR([153. / 255., 76. / 255., 0, 1]))
+                        door.append(COLOR(BROWN))
                         door.append(OFFSET([.01, .01, .01])(SKEL_1(prod)))
                         door.append(T([1, 2, 3])([0, -(y[0] / 2. - dCorner[0] / 2 - .005), 0]))
                         # vetro

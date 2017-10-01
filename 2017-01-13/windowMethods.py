@@ -45,7 +45,7 @@ def createWindow(coordinate, occupancy):
                     if ix==1:
                         prodXY = PROD([QUOTE([x[cont]]),QUOTE(y)])
                         prod = PROD([prodXY,QUOTE([z[iz]])])
-                        window.append(COLOR([51./255.,25./255.,0,1]))
+                        window.append(COLOR(WHITE))
                         window.append(prod)
                     if ix==0:
                         if(iz<len(z)-2):
@@ -53,7 +53,7 @@ def createWindow(coordinate, occupancy):
                             prodXY = PROD([QUOTE([x[cont]-.01]),QUOTE(dCorner)])
                             prod = PROD([prodXY,QUOTE([z[iz]-.01])])
                             window.append(T([1,2,3])([0,y[0]/2.-dCorner[0]/2-.005,0]))
-                            window.append(COLOR([153./255.,76./255.,0,1]))
+                            window.append(COLOR(WHITE))
                             window.append(OFFSET([.01,.01,.01])(SKEL_1(prod)))
                             window.append(T([1,2,3])([0,-(y[0]/2.-dCorner[0]/2-.005),0]))
                         #vetro

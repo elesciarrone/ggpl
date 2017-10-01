@@ -3,6 +3,7 @@ from supportMethods import *
 
 # Definizione delle texture
 TILES_TXT = "./textures/tiles_txt.jpg"
+TERRACE_TXT = "./textures/terrace_txt.jpg"
 
 # Funzione per la costruzione del tetto
 def myRoofTerrace(house,angle,length):
@@ -29,7 +30,7 @@ def createRoof(vertexes,angle,length):
     terrace = POLYLINE(vertexsOfTerrace)
     terrace = SOLIDIFY(terrace)
     terrace = T(3)(listOfPlan[0][2][2])(terrace)
-    terrace = TEXTURE([TILES_TXT, TRUE, FALSE, 1, 1, 0, 15, 15])(terrace)
+    terrace = TEXTURE([TERRACE_TXT, TRUE, FALSE, 1, 1, 0, 15, 15])(terrace)
     roof = STRUCT(drawListOfPlan)
     roof=TEXTURE([TILES_TXT, TRUE, FALSE, 1, 1, 0, 15, 15])(roof)
     return STRUCT([terrace,roof,subroof])
